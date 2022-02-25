@@ -45,9 +45,10 @@ function totalPages(count: number, limit: number) {
 }
 
 function normalizePageData({ limit, page }: PageData) {
-  const normalLimit = limit || 20;
+  page = page - 1 < 0 ? 1 : page;
+  const normalLimit = limit || 10;
   return {
     limit: normalLimit,
-    offset: page == 1 ? 0 : page * normalLimit,
+    offset: (page - 1) * normalLimit,
   };
 }
