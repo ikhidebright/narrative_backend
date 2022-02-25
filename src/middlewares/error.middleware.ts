@@ -19,8 +19,6 @@ export const errorHandler = (
   next: NextFunction
 ) => {
   let status = 500;
-  console.log(error);
-
   let message = error.message;
   if (error instanceof APIException) {
     status = error.statusCode || status;

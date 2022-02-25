@@ -27,7 +27,7 @@ function connectModelAttrs(sequelize: Sequelize): void {
         allowNull: false,
       },
       max_bid_price: {
-        type: DataTypes.DECIMAL,
+        type: DataTypes.DECIMAL(15, 2),
         allowNull: false,
       },
       data_package_type: {
