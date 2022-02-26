@@ -20,6 +20,7 @@ export async function paginate<M extends SeqModel>(
       : normalizePageData(pageData);
   const { rows, count } = await model.findAndCountAll({
     ...normalized,
+    order: [["createdAt", "DESC"]],
     ...options,
   });
   const total = normalized.limit ? totalPages(count, normalized.limit) : count;
