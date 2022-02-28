@@ -4,10 +4,10 @@
   "description": "",
   "main": "dist/server.js",
   "scripts": {
-    "build": "node_modules/.bin/tsc ",
+    "build": "tsc ",
     "start": "npx sequelize db:migrate && node -r tsconfig-paths/register .",
-    "migrate:up": "node_modules/.bin/tsc && npx sequelize db:migrate",
-    "migrate:down": "node_modules/.bin/tsc && npx sequelize db:migrate:undo:all",
+    "migrate:up": "tsc && npx sequelize db:migrate",
+    "migrate:down": "tsc && npx sequelize db:migrate:undo:all",
     "make:migrate": "npx sequelize migration:generate --migrations-path ./src/migrations",
     "dev": "ts-node-dev --respawn --pretty --transpile-only -r tsconfig-paths/register src/server.ts",
     "test": "jest",
