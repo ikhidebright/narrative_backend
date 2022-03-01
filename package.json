@@ -1,5 +1,5 @@
 {
-  "name": "narrative",
+  "name": "narrative_backend",
   "version": "0.1.0",
   "description": "",
   "main": "dist/server.js",
@@ -13,7 +13,7 @@
     "test": "jest",
     "lint": "eslint . --ext .ts --quiet"
   },
-  "author": "narrative",
+  "author": "Ikhide Bright",
   "license": "",
   "dependencies": {
     "@babel/core": "^7.14.0",
